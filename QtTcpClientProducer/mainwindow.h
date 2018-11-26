@@ -25,7 +25,6 @@ public:
   ~MainWindow();
   
 public slots:
-  void putData();
   /**
    * @brief ConnectAdress
    */
@@ -34,9 +33,42 @@ public slots:
    * @brief DisconnectAdress
    */
   void DisconnectAdress();
+  /**
+   * @brief start
+   */
+  void start();
+  /**
+   * @brief stop
+   */
+  void stop();
+  /**
+   * @brief setMax
+   * @param Max
+   */
+  void setMax(int Max);
+  /**
+   * @brief setMin
+   * @param Min
+   */
+  void setMin(int Min);
+  /**
+   * @brief PegaSeg
+   * @param seg
+   */
+  void PegaSeg(int seg);
+  /**
+   * @brief timerEvent
+   * @param event
+   */
+  void timerEvent(QTimerEvent *event);
 private:
   Ui::MainWindow *ui;
   QTcpSocket *socket;
+  bool comeca;
+  int temporizador;
+  int segundos;
+  int Maximo;
+  int Minimo;
 };
 
 #endif // MAINWINDOW_H
