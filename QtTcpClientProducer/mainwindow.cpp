@@ -134,7 +134,7 @@ void MainWindow::timerEvent(QTimerEvent *event)
 
         msecdate = QDateTime::currentDateTime().toMSecsSinceEpoch();
         str = "set "+ QString::number(msecdate) + " " + QString::number(Minimo+(qrand()%(Maximo-Minimo+1)))+"\r\n";
-        ui->textBrowserChegada->setText(str);
+        ui->textBrowserChegada->append(str);
         qDebug() << str;
         qDebug() << socket->write(str.toStdString().c_str()) << " bytes written";
         if(socket->waitForBytesWritten(3000)){

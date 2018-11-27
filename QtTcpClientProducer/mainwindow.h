@@ -10,7 +10,7 @@ namespace Ui {
 class MainWindow;
 }
 /**
- * @brief The MainWindow class
+ * @brief The MainWindow class é onda esta localizado toda a parte de funcionalidades da user interface
  */
 class MainWindow : public QMainWindow
 {
@@ -18,46 +18,45 @@ class MainWindow : public QMainWindow
 
 public:
     /**
-     * @brief MainWindow
-     * @param parent
+     * @brief MainWindow Chamada que cria toda a classe MainWidow
      */
     explicit MainWindow(QWidget *parent = 0);
   ~MainWindow();
   
 public slots:
   /**
-   * @brief ConnectAdress
+   * @brief ConnectAdress Classe para se connectar no endereço passado
    */
   void ConnectAdress();
   /**
-   * @brief DisconnectAdress
+   * @brief DisconnectAdress Classe para se desconectar do endereço
    */
   void DisconnectAdress();
   /**
-   * @brief start
+   * @brief start Classe para começar a produzir os dados
    */
   void start();
   /**
-   * @brief stop
+   * @brief stop Classe para parar de produzir os dados
    */
   void stop();
   /**
-   * @brief setMax
-   * @param Max
+   * @brief setMax Set o valor maximo para a produção dos dados
+   * @param Max paramentro do valor maximo
    */
   void setMax(int Max);
   /**
-   * @brief setMin
-   * @param Min
+   * @brief setMin Set o valor minimo para a produção de dados
+   * @param Min paramentro do valor minimo
    */
   void setMin(int Min);
   /**
-   * @brief PegaSeg
-   * @param seg
+   * @brief PegaSeg Set o tempo entre uma chamada e outra
+   * @param seg parametro do valor do segundo
    */
   void PegaSeg(int seg);
   /**
-   * @brief timerEvent
+   * @brief timerEvent Classe que é chamada de tempos em tempos a partir dos segudos setados.
    * @param event
    */
   void timerEvent(QTimerEvent *event);

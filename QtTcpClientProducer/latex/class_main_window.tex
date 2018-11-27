@@ -1,0 +1,118 @@
+\hypertarget{class_main_window}{}\section{Main\+Window Class Reference}
+\label{class_main_window}\index{Main\+Window@{Main\+Window}}
+
+
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class é onda esta localizado toda a parte de funcionalidades da user interface.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a3613ef775489a7934cbb2f2a0c241a74}\label{class_main_window_a3613ef775489a7934cbb2f2a0c241a74}} 
+void \mbox{\hyperlink{class_main_window_a3613ef775489a7934cbb2f2a0c241a74}{Connect\+Adress}} ()
+\begin{DoxyCompactList}\small\item\em Connect\+Adress Classe para se connectar no endereço passado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a6d91a01cd024fa6141b888116b8fe7e9}\label{class_main_window_a6d91a01cd024fa6141b888116b8fe7e9}} 
+void \mbox{\hyperlink{class_main_window_a6d91a01cd024fa6141b888116b8fe7e9}{Disconnect\+Adress}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect\+Adress Classe para se desconectar do endereço. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a5edcbc314e782645cdf4db101eeb247d}\label{class_main_window_a5edcbc314e782645cdf4db101eeb247d}} 
+void \mbox{\hyperlink{class_main_window_a5edcbc314e782645cdf4db101eeb247d}{start}} ()
+\begin{DoxyCompactList}\small\item\em start Classe para começar a produzir os dados \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a939e90ddfe07d74be87b351ca2171fb0}\label{class_main_window_a939e90ddfe07d74be87b351ca2171fb0}} 
+void \mbox{\hyperlink{class_main_window_a939e90ddfe07d74be87b351ca2171fb0}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stop Classe para parar de produzir os dados \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_abd23e6005d51e6a4426cfa39f88e0ba6}{set\+Max}} (int Max)
+\begin{DoxyCompactList}\small\item\em set\+Max Set o valor maximo para a produção dos dados \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a911cc55fc2d492c44679834146faa77f}{set\+Min}} (int Min)
+\begin{DoxyCompactList}\small\item\em set\+Min Set o valor minimo para a produção de dados \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4fa75cec1aa7eeca94028dbcb58bbe14}{Pega\+Seg}} (int seg)
+\begin{DoxyCompactList}\small\item\em Pega\+Seg Set o tempo entre uma chamada e outra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aaa425b1554af3c1f58cc70b4815082ae}{timer\+Event}} (Q\+Timer\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em timer\+Event Classe que é chamada de tempos em tempos a partir dos segudos setados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}} 
+\mbox{\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_main_window}{Main\+Window}} Chamada que cria toda a classe Main\+Widow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class é onda esta localizado toda a parte de funcionalidades da user interface. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_a4fa75cec1aa7eeca94028dbcb58bbe14}\label{class_main_window_a4fa75cec1aa7eeca94028dbcb58bbe14}} 
+\index{Main\+Window@{Main\+Window}!Pega\+Seg@{Pega\+Seg}}
+\index{Pega\+Seg@{Pega\+Seg}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{Pega\+Seg}{PegaSeg}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Pega\+Seg (\begin{DoxyParamCaption}\item[{int}]{seg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Pega\+Seg Set o tempo entre uma chamada e outra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seg} & parametro do valor do segundo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_abd23e6005d51e6a4426cfa39f88e0ba6}\label{class_main_window_abd23e6005d51e6a4426cfa39f88e0ba6}} 
+\index{Main\+Window@{Main\+Window}!set\+Max@{set\+Max}}
+\index{set\+Max@{set\+Max}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{set\+Max}{setMax}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Max (\begin{DoxyParamCaption}\item[{int}]{Max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Max Set o valor maximo para a produção dos dados 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Max} & paramentro do valor maximo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a911cc55fc2d492c44679834146faa77f}\label{class_main_window_a911cc55fc2d492c44679834146faa77f}} 
+\index{Main\+Window@{Main\+Window}!set\+Min@{set\+Min}}
+\index{set\+Min@{set\+Min}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{set\+Min}{setMin}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Min (\begin{DoxyParamCaption}\item[{int}]{Min }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Min Set o valor minimo para a produção de dados 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Min} & paramentro do valor minimo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_aaa425b1554af3c1f58cc70b4815082ae}\label{class_main_window_aaa425b1554af3c1f58cc70b4815082ae}} 
+\index{Main\+Window@{Main\+Window}!timer\+Event@{timer\+Event}}
+\index{timer\+Event@{timer\+Event}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{timer\+Event}{timerEvent}}
+{\footnotesize\ttfamily void Main\+Window\+::timer\+Event (\begin{DoxyParamCaption}\item[{Q\+Timer\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+timer\+Event Classe que é chamada de tempos em tempos a partir dos segudos setados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}
