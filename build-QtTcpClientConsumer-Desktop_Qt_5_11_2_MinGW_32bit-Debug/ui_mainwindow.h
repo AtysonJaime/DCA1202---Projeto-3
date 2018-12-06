@@ -26,6 +26,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "plotter.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -34,8 +35,8 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QPushButton *pushButtonGet;
-    QWidget *widgetPlotter;
-    QWidget *widget;
+    Plotter *widgetPlotter;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_3;
     QGridLayout *gridLayout_3;
     QVBoxLayout *verticalLayout;
@@ -69,13 +70,13 @@ public:
         pushButtonGet = new QPushButton(centralWidget);
         pushButtonGet->setObjectName(QStringLiteral("pushButtonGet"));
         pushButtonGet->setGeometry(QRect(10, 470, 93, 28));
-        widgetPlotter = new QWidget(centralWidget);
+        widgetPlotter = new Plotter(centralWidget);
         widgetPlotter->setObjectName(QStringLiteral("widgetPlotter"));
         widgetPlotter->setGeometry(QRect(323, 11, 371, 441));
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 10, 291, 441));
-        verticalLayout_3 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 291, 441));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
@@ -86,7 +87,7 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        plainTextEditAdress = new QPlainTextEdit(widget);
+        plainTextEditAdress = new QPlainTextEdit(layoutWidget);
         plainTextEditAdress->setObjectName(QStringLiteral("plainTextEditAdress"));
         QFont font;
         font.setPointSize(10);
@@ -97,13 +98,13 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        pushButtonConnect = new QPushButton(widget);
+        pushButtonConnect = new QPushButton(layoutWidget);
         pushButtonConnect->setObjectName(QStringLiteral("pushButtonConnect"));
         pushButtonConnect->setFont(font);
 
         horizontalLayout->addWidget(pushButtonConnect);
 
-        pushButtonDisconnect = new QPushButton(widget);
+        pushButtonDisconnect = new QPushButton(layoutWidget);
         pushButtonDisconnect->setObjectName(QStringLiteral("pushButtonDisconnect"));
         pushButtonDisconnect->setFont(font);
 
@@ -116,7 +117,7 @@ public:
 
         gridLayout_3->addLayout(verticalLayout, 0, 0, 1, 1);
 
-        listWidgetAdress = new QListWidget(widget);
+        listWidgetAdress = new QListWidget(layoutWidget);
         listWidgetAdress->setObjectName(QStringLiteral("listWidgetAdress"));
 
         gridLayout_3->addWidget(listWidgetAdress, 1, 0, 1, 1);
@@ -136,7 +137,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        pushButtonUpdate = new QPushButton(widget);
+        pushButtonUpdate = new QPushButton(layoutWidget);
         pushButtonUpdate->setObjectName(QStringLiteral("pushButtonUpdate"));
 
         horizontalLayout_2->addWidget(pushButtonUpdate);
@@ -147,13 +148,13 @@ public:
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(6);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        pushButtonStop = new QPushButton(widget);
+        pushButtonStop = new QPushButton(layoutWidget);
         pushButtonStop->setObjectName(QStringLiteral("pushButtonStop"));
         pushButtonStop->setFont(font);
 
         gridLayout_2->addWidget(pushButtonStop, 1, 1, 1, 1);
 
-        pushButtonStart = new QPushButton(widget);
+        pushButtonStart = new QPushButton(layoutWidget);
         pushButtonStart->setObjectName(QStringLiteral("pushButtonStart"));
         pushButtonStart->setFont(font);
 
@@ -162,7 +163,7 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        horizontalSliderSeg = new QSlider(widget);
+        horizontalSliderSeg = new QSlider(layoutWidget);
         horizontalSliderSeg->setObjectName(QStringLiteral("horizontalSliderSeg"));
         horizontalSliderSeg->setMinimum(1);
         horizontalSliderSeg->setMaximum(10);
@@ -170,14 +171,14 @@ public:
 
         gridLayout->addWidget(horizontalSliderSeg, 1, 0, 1, 1);
 
-        lcdNumberSeg = new QLCDNumber(widget);
+        lcdNumberSeg = new QLCDNumber(layoutWidget);
         lcdNumberSeg->setObjectName(QStringLiteral("lcdNumberSeg"));
         lcdNumberSeg->setFrameShadow(QFrame::Raised);
         lcdNumberSeg->setSegmentStyle(QLCDNumber::Flat);
 
         gridLayout->addWidget(lcdNumberSeg, 1, 1, 1, 1);
 
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
         QFont font1;
         font1.setPointSize(9);
