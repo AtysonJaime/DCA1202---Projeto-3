@@ -18,15 +18,12 @@ public:
   ~MainWindow();
   
 public slots:
-  void getData();
   void ConnectAdress();
   /**
    * @brief DisconnectAdress Classe para se desconectar do endereço
    */
   void DisconnectAdress();
-  /**
-   * @brief start Classe para começar a produzir os dados
-   */
+
   /**
    * @brief start Classe para começar a produzir os dados
    */
@@ -40,6 +37,11 @@ public slots:
    * @param seg parametro do valor do segundo
    */
   void PegaSeg(int seg);
+  /**
+   * @brief update Classa para renovar a lista de endereços possiveis para acessar
+   */
+  void update();
+  void timerEvent(QTimerEvent *event);
 private:
   Ui::MainWindow *ui;
   QTcpSocket *socket;

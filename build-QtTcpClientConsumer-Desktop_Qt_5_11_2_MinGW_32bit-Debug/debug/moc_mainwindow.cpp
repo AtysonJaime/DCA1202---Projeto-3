@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[9];
-    char stringdata0[74];
+    QByteArrayData data[12];
+    char stringdata0[103];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,19 +32,22 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 7), // "getData"
-QT_MOC_LITERAL(2, 19, 0), // ""
-QT_MOC_LITERAL(3, 20, 13), // "ConnectAdress"
-QT_MOC_LITERAL(4, 34, 16), // "DisconnectAdress"
-QT_MOC_LITERAL(5, 51, 5), // "start"
-QT_MOC_LITERAL(6, 57, 4), // "stop"
-QT_MOC_LITERAL(7, 62, 7), // "PegaSeg"
-QT_MOC_LITERAL(8, 70, 3) // "seg"
+QT_MOC_LITERAL(1, 11, 13), // "ConnectAdress"
+QT_MOC_LITERAL(2, 25, 0), // ""
+QT_MOC_LITERAL(3, 26, 16), // "DisconnectAdress"
+QT_MOC_LITERAL(4, 43, 5), // "start"
+QT_MOC_LITERAL(5, 49, 4), // "stop"
+QT_MOC_LITERAL(6, 54, 7), // "PegaSeg"
+QT_MOC_LITERAL(7, 62, 3), // "seg"
+QT_MOC_LITERAL(8, 66, 6), // "update"
+QT_MOC_LITERAL(9, 73, 10), // "timerEvent"
+QT_MOC_LITERAL(10, 84, 12), // "QTimerEvent*"
+QT_MOC_LITERAL(11, 97, 5) // "event"
 
     },
-    "MainWindow\0getData\0\0ConnectAdress\0"
-    "DisconnectAdress\0start\0stop\0PegaSeg\0"
-    "seg"
+    "MainWindow\0ConnectAdress\0\0DisconnectAdress\0"
+    "start\0stop\0PegaSeg\0seg\0update\0timerEvent\0"
+    "QTimerEvent*\0event"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,7 +57,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -62,20 +65,22 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x0a /* Public */,
-       3,    0,   45,    2, 0x0a /* Public */,
-       4,    0,   46,    2, 0x0a /* Public */,
-       5,    0,   47,    2, 0x0a /* Public */,
-       6,    0,   48,    2, 0x0a /* Public */,
-       7,    1,   49,    2, 0x0a /* Public */,
+       1,    0,   49,    2, 0x0a /* Public */,
+       3,    0,   50,    2, 0x0a /* Public */,
+       4,    0,   51,    2, 0x0a /* Public */,
+       5,    0,   52,    2, 0x0a /* Public */,
+       6,    1,   53,    2, 0x0a /* Public */,
+       8,    0,   56,    2, 0x0a /* Public */,
+       9,    1,   57,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    7,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void, 0x80000000 | 10,   11,
 
        0        // eod
 };
@@ -86,12 +91,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->getData(); break;
-        case 1: _t->ConnectAdress(); break;
-        case 2: _t->DisconnectAdress(); break;
-        case 3: _t->start(); break;
-        case 4: _t->stop(); break;
-        case 5: _t->PegaSeg((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 0: _t->ConnectAdress(); break;
+        case 1: _t->DisconnectAdress(); break;
+        case 2: _t->start(); break;
+        case 3: _t->stop(); break;
+        case 4: _t->PegaSeg((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->update(); break;
+        case 6: _t->timerEvent((*reinterpret_cast< QTimerEvent*(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -122,13 +128,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
